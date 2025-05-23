@@ -1,0 +1,66 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "date": {
+        "type": "string"
+      },
+      "comments": {
+        "fields": {
+          "comment": {
+            "type": "string"
+          }
+        },
+        "type": "document"
+      },
+
+      "guest": {
+        "fields": {
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          }
+        },
+        "type": "document"
+      },
+      "name": {
+        "type": "string"
+      },
+      "restaurantNotes": {
+        "fields": {
+          "restaurantNote": {
+            "type": "string"
+          }
+        },
+        "type": "document"
+      },
+      "tables": {
+        "fields": {
+          "area": {
+            "fields": {
+              "internalNote": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "type": "document"
+          },
+          "internalNote": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "type": "document"
+      }
+    }
+  }
+}

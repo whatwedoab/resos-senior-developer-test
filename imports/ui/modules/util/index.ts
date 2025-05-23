@@ -1,0 +1,1 @@
+export {generateRwgSnackbarString} from './generateRwgSnackbarString'

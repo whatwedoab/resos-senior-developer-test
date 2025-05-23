@@ -1,0 +1,1 @@
+export const generateRwgSnackbarString = (str: string) => str
