@@ -172,10 +172,12 @@ But I suppose that's not the point of this test :)
 I'd create a `newsletterSubscribers` collection with primarily the restaurant reference, recipient email address and
 subscription status, and potentially reference related customer/guest objects, or orders and bookings it stemmed from.
 
-I'd also create a `emails` collection, storing each email with a reference to the newsletter subscriber and information
+We'd need a `sendout`/`campaign`/`newsletter` collection that defines the newsletters—content, timing, subject etc.
+
+I'd also create an `emails` collection, storing each email with a reference to the `sendout` and the `newsletterSubscriber`, and information
 about the email i.e. status, subject etc.
 
-How much information to be stored in the `sentEmails` documents depends a lot on the sending service. Because I wouldn't
+How much information to be stored in the `emails` documents depends a lot on the sending service. Because I wouldn't
 build the sending logic myself, I'd shop for a good service that can handle that for us, like **SendGrid** or **MailerSend**. These services most often also include tracking and a copy of the email, which we could rely on if we
 don't want to store it ourselves.
 
